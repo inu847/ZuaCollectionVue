@@ -12,7 +12,7 @@ let config = {
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
   // timeout: 60 * 1000, // Timeout
   // withCredentials: true, // Check cross-site Access-Control
-  baseURL: 'http://localhost/zuacollection/public/api/v1',
+  baseURL: process.env.VUE_APP_API_URL + '/v1',
 };
 
 const _axios = axios.create(config);

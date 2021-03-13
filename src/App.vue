@@ -3,7 +3,7 @@
     <v-app-bar color="primary" app dark extended>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Vueshop</v-toolbar-title>
+      <v-toolbar-title>{{ appName }}</v-toolbar-title>
 
       <v-text-field
           slot="extension"

@@ -1,0 +1,13 @@
+{
+  "appId": "org.team.zua",
+  "appName": "zuacollection",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
