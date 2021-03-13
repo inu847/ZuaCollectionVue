@@ -9,7 +9,7 @@
       </div>
       <v-layout wrap>
         <v-flex v-for="(category) in categories" :key="`category-`+category.id" xs6>
-          <v-card :to="'/category/'+ category.title">
+          <v-card :to="'/category/'+ category.id">
               <v-img
                 :src="getImage('/storage/'+ category.avatar)"
                 class="white--text"
@@ -50,7 +50,7 @@
       </div>
       <v-layout wrap>
         <v-flex v-for="(book) in books" :key="`book-`+book.id" xs6>
-          <v-card :to="'/book/'+ book.product_name">
+          <v-card :to="'/book/'+ book.id">
             <v-img
               :src="getImage('/storage/'+ book.tampak_depan)"
               class="white--text"
