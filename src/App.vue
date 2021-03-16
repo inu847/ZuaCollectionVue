@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar color="primary" app dark extended>
+  <v-app style="background-image: url('https://cdn.vuetifyjs.com/images/parallax/material2.jpg')">
+    <v-app-bar color="dark" app dark extended>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>{{ appName }}</v-toolbar-title>
@@ -21,7 +21,6 @@
           <template v-slot:badge>
             <span>3</span>
           </template>
-          
             <v-icon>mdi-cart</v-icon>
         </v-badge>
       </v-btn>
@@ -87,13 +86,9 @@
       </v-container>
     </v-content>
 
-    <v-card>
-      <v-footer absolute app>
-        <v-card-text class="text-center">
+        <v-card-text class="text-center white--text">
           &copy; {{ new Date().getFullYear() }} — <strong>ZuaCollection</strong>
         </v-card-text>
-      </v-footer>
-    </v-card>
   </v-app>
 </template>
 
