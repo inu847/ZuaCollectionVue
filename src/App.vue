@@ -1,8 +1,10 @@
 <template>
-  <v-app style="background-image: url('https://cdn.vuetifyjs.com/images/parallax/material2.jpg')">
-    <v-app-bar color="dark" app dark extended>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
+  <v-app>
+    <v-img :src="require('./assets/bg-dark.jpg')">
+
+    <v-app-bar :src="require('./assets/bg-red-large.svg')" extended>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>{{ appName }}</v-toolbar-title>
 
       <v-text-field
@@ -11,10 +13,8 @@
           flat
           label="Search"
           prepend-inner-icon="mdi-magnify"
-          solo-inverted
-      >
+          solo-inverted>
       </v-text-field>
-      
       <v-spacer></v-spacer>
       <v-btn icon to="/about">
         <v-badge color="orange" overlap>
@@ -25,7 +25,26 @@
         </v-badge>
       </v-btn>
     </v-app-bar>
-        <v-card>
+
+    <!-- <template>
+      <v-img :src="require('./assets/bg-red-large.svg')" contain></v-img>
+    </template> -->
+      <v-content>
+        <v-container>
+          <v-slide-y-transition mode="out-in">
+          <router-view >
+          </router-view>
+          </v-slide-y-transition>
+        </v-container>
+      </v-content>
+    
+        <v-card-text class="text-center white--text">
+          &copy; {{ new Date().getFullYear() }} — <strong>ZuaCollection</strong>
+        </v-card-text>
+    </v-img>
+    <v-card>
+
+
           <v-navigation-drawer app v-model="drawer">
 
               <div class="pa-2" v-if="guest">
@@ -76,19 +95,6 @@
 
           </v-navigation-drawer>
         </v-card>
-
-
-    <v-content>
-      <v-container fluid>
-        <v-slide-y-transition mode="out-in">
-        <router-view></router-view>
-        </v-slide-y-transition>
-      </v-container>
-    </v-content>
-
-        <v-card-text class="text-center white--text">
-          &copy; {{ new Date().getFullYear() }} — <strong>ZuaCollection</strong>
-        </v-card-text>
   </v-app>
 </template>
 
